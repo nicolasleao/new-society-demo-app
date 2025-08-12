@@ -22,3 +22,14 @@ backend:
 fastapi
 postgresql
 sqlalchemy
+
+
+# Commands:
+Run backend:
+`cd backend && uvicorn main:app --reload`
+
+Run frontend:
+`cd frontend && npm run dev`
+
+Run unit tests:
+`PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest tests/ -v`
