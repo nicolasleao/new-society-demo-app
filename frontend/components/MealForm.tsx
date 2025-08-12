@@ -58,7 +58,7 @@ export default function MealForm({ username, onMealAdded }: MealFormProps) {
             type="text"
             id="title"
             required
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm px-3 py-2 border"
+            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm px-3 py-2 border placeholder-gray-500 text-gray-900"
             placeholder="e.g., Breakfast, Chicken Salad"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -75,7 +75,7 @@ export default function MealForm({ username, onMealAdded }: MealFormProps) {
               id="carbs"
               min="0"
               step="0.1"
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm px-3 py-2 border"
+              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm px-3 py-2 border placeholder-gray-500 text-gray-900"
               placeholder="0"
               value={carbs}
               onChange={(e) => setCarbs(e.target.value)}
@@ -91,7 +91,7 @@ export default function MealForm({ username, onMealAdded }: MealFormProps) {
               id="proteins"
               min="0"
               step="0.1"
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm px-3 py-2 border"
+              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm px-3 py-2 border placeholder-gray-500 text-gray-900"
               placeholder="0"
               value={proteins}
               onChange={(e) => setProteins(e.target.value)}
@@ -107,7 +107,7 @@ export default function MealForm({ username, onMealAdded }: MealFormProps) {
               id="fats"
               min="0"
               step="0.1"
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm px-3 py-2 border"
+              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm px-3 py-2 border placeholder-gray-500 text-gray-900"
               placeholder="0"
               value={fats}
               onChange={(e) => setFats(e.target.value)}
@@ -123,7 +123,7 @@ export default function MealForm({ username, onMealAdded }: MealFormProps) {
               id="calories"
               min="0"
               step="1"
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm px-3 py-2 border"
+              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm px-3 py-2 border placeholder-gray-500 text-gray-900"
               placeholder="0"
               value={calories}
               onChange={(e) => setCalories(e.target.value)}

@@ -77,15 +77,17 @@ export default function StatsDisplay({ stats }: StatsDisplayProps) {
           </div>
 
           {/* Pie Chart */}
-          <div className="mt-6">
+          <div className="mt-6 pb-4">
             <h3 className="text-md font-medium text-gray-900 mb-3 text-center">
               Macro Distribution
             </h3>
-            <MacroPieChart
-              carbs={stats.total_carbs}
-              proteins={stats.total_proteins}
-              fats={stats.total_fats}
-            />
+            <div className="h-80">
+              <MacroPieChart
+                carbs={stats.total_carbs}
+                proteins={stats.total_proteins}
+                fats={stats.total_fats}
+              />
+            </div>
           </div>
         </div>
       )}
