@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func
 from datetime import datetime, date
 from typing import List, Optional
-from database import SessionLocal, engine, get_db
+from database import engine, get_db
 from models import Base, Meal
 from schemas import MealCreate, MealResponse, StatsResponse, TodayStatsResponse
 
