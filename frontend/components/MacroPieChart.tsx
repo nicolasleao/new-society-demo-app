@@ -43,6 +43,7 @@ export default function MacroPieChart({ carbs, proteins, fats }: MacroPieChartPr
     },
   ].filter(item => item.value > 0);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const CustomLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percentage }: any) => {
     const RADIAN = Math.PI / 180;
     const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
@@ -89,6 +90,7 @@ export default function MacroPieChart({ carbs, proteins, fats }: MacroPieChartPr
           <Legend 
             verticalAlign="bottom" 
             height={36}
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
             formatter={(value, entry: any) => 
               `${value}: ${entry.payload.value}g (${entry.payload.percentage}%)`
             }

@@ -11,7 +11,7 @@ export default function StatsDisplay({ stats }: StatsDisplayProps) {
   if (!stats) {
     return (
       <div className="bg-white shadow rounded-lg p-6">
-        <h2 className="text-lg font-medium text-gray-900 mb-4">Today's Summary</h2>
+        <h2 className="text-lg font-medium text-gray-900 mb-4">Today&apos;s Summary</h2>
         <div className="text-center text-gray-500">Loading...</div>
       </div>
     );
@@ -21,7 +21,7 @@ export default function StatsDisplay({ stats }: StatsDisplayProps) {
 
   return (
     <div className="bg-white shadow rounded-lg p-6">
-      <h2 className="text-lg font-medium text-gray-900 mb-4">Today's Summary</h2>
+      <h2 className="text-lg font-medium text-gray-900 mb-4">Today&apos;s Summary</h2>
       
       {!hasData ? (
         <div className="text-center text-gray-500 py-8">
