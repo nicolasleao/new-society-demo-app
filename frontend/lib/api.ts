@@ -42,6 +42,19 @@ export interface TodayStats extends Stats {
   date: string;
 }
 
+export interface AIMealRequest {
+  description: string;
+  username: string;
+}
+
+export interface AIMealResponse {
+  title: string;
+  carbs: number;
+  proteins: number;
+  fats: number;
+  total_calories: number;
+}
+
 export const mealApi = {
   createMeal: async (meal: MealCreate): Promise<Meal> => {
     const response = await api.post('/meals', meal);
@@ -65,6 +78,11 @@ export const mealApi = {
 
   getTodayStats: async (username: string): Promise<TodayStats> => {
     const response = await api.get(`/stats/${username}/today`);
+    return response.data;
+  },
+
+  inferMealFromDescription: async (request: AIMealRequest): Promise<AIMealResponse> => {
+    const response = await api.post('/meals/ai-infer', request);
     return response.data;
   },
 };
