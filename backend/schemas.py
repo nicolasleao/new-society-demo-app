@@ -45,3 +45,20 @@ class StatsResponse(BaseModel):
     
 class TodayStatsResponse(StatsResponse):
     date: str
+
+class AIMealRequest(BaseModel):
+    description: str
+    username: str
+    
+    @validator('description', 'username')
+    def validate_non_empty_strings(cls, v):
+        if not v or not v.strip():
+            raise ValueError('Field cannot be empty')
+        return v.strip()
+
+class AIMealResponse(BaseModel):
+    title: str
+    carbs: float
+    proteins: float
+    fats: float
+    total_calories: float
